@@ -1,0 +1,40 @@
+#include "chapter01.hpp"
+#include "chapter02.hpp"
+
+int main()
+{
+	/*NotNarrowed::ex::Run();
+
+	NULLPOINTER::ex::Run();
+
+	SMART_POINTER::UNIQUE_PTR::ex1::Run();
+	SMART_POINTER::UNIQUE_PTR::ex2::Run();
+	SMART_POINTER::UNIQUE_PTR::ex3::Run();
+	SMART_POINTER::UNIQUE_PTR::ex4::Run();
+
+	SMART_POINTER::SHARED_PTR::ex1::Run();
+	SMART_POINTER::SHARED_PTR::ex2::Run();
+	SMART_POINTER::SHARED_PTR::ex3::Run();
+	SMART_POINTER::SHARED_PTR::ex4::Run();
+
+	CONSTRUCTOR::COPY_CONSTRUCTOR::ex1::Run();
+
+	CONSTRUCTOR::COPY_CONSTRUCTOR::DIY::Run();
+
+	CONSTRUCTOR::EXPLICIT::ex1::Run();
+	CONSTRUCTOR::EXPLICIT::ex2::Run();
+
+	CONSTRUCTOR::Delegating::Run();
+
+	CONSTRUCTOR::INITIALIZER_LIST::ex1::Run();
+	CONSTRUCTOR::INITIALIZER_LIST::ex2::Run();
+	CONSTRUCTOR::INITIALIZER_LIST::ex3::Run();
+
+	CONSTRUCTOR::INITIALIZER_LIST::DIY::Run();
+
+	CONSTRUCTOR::MOVE::ex1::Run();
+	CONSTRUCTOR::MOVE::ex2::Run();*/
+
+
+	return 0;
+}
