@@ -22,6 +22,7 @@ namespace Template
 			return a + b;
 		}
 
+
 		void Run()
 		{
 			cout << add(10, 20) << endl;

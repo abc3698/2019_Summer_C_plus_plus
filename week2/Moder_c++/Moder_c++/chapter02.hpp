@@ -21,6 +21,7 @@ namespace CONSTRUCTOR
 		class Solver
 		{
 		public:
+			// Error
 			/*Solver(int nrows, int ncols)
 			{
 				matrix = Matrix(nrows, ncols);
@@ -46,6 +47,8 @@ namespace CONSTRUCTOR
 				int ncols;
 			public:
 				Matrix(int nrows, int ncols) : nrows(nrows), ncols(ncols) {}
+				// 정의하지 않아도 암묵적으로 복사 생성자를 생성
+				// 얕은 복사가 일어남
 				//Matrix(const Matrix & rhs) : nrows(rhs.nrows), ncols(rhs.ncols) {}
 			};
 
@@ -74,10 +77,7 @@ namespace CONSTRUCTOR
 				//std::unique_ptr<double> pd;
 			public:
 				foo(double val) : pd(new double) { *pd = val; }
-				/*foo(const foo & rhs) : pd(new double)
-				{
-					*pd = *rhs.pd;
-				}*/
+				
 				~foo() { delete pd; }
 			};
 
@@ -138,6 +138,7 @@ namespace CONSTRUCTOR
 			void Run()
 			{
 				int num = 43;
+				// Error
 				//Print_Foo(num);
 			}
 		}
@@ -166,10 +167,35 @@ namespace CONSTRUCTOR
 			cout << "m.nrows : " << m.nrows << " m.ncols : " << m.ncols << endl;
 		}
 	}
+
+	namespace MEMBER_DEFAULT
+	{
+		/***********************************************************************/
+		/*			  				   멤버의 기본 값 예제 					   */
+		/***********************************************************************/
+		class Matrix_Modern
+		{
+		public:
+			int nrows = 10;
+			int ncols = 10;
+		public:
+			Matrix_Modern(int nrows, int ncols) : nrows{ nrows }, ncols{ ncols } {}
+			Matrix_Modern(int nrows) : nrows{nrows} {}
+			Matrix_Modern(){}
+
+		};
+
+		void Run()
+		{
+			Matrix_Modern m;
+			cout << "m.nrows : " << m.nrows << " m.ncols : " << m.ncols << endl;
+		}
+	}
+
 	namespace INITIALIZER_LIST
 	{
 		/***********************************************************************/
-		/*			  				   초기화 리스트 예제 1					   */
+		/*			  				   유니폼 초기화 예제 1					   */
 		/***********************************************************************/
 		namespace ex1
 		{
@@ -191,7 +217,7 @@ namespace CONSTRUCTOR
 		}
 
 		/***********************************************************************/
-		/*			  				   초기화 리스트 예제 2					   */
+		/*			  				   유니폼 초기화 예제 2					   */
 		/***********************************************************************/
 		namespace ex2
 		{
@@ -207,7 +233,7 @@ namespace CONSTRUCTOR
 		}
 
 		/***********************************************************************/
-		/*			  				   초기화 리스트 예제 3					   */
+		/*			  				   초기화 리스트 예제 1					   */
 		/***********************************************************************/
 		namespace ex3
 		{
@@ -279,19 +305,6 @@ namespace CONSTRUCTOR
 					std::copy(std::begin(values), std::end(values), &data[0]);
 					return *this;
 				}
-
-				/*list& operator=(std::initializer_list<double> values)
-				{
-					if (size != values.size())
-					{
-						data.release();
-						size = values.size();
-						data = std::make_unique<double[]>(size);
-					}
-
-					std::copy(std::begin(values), std::end(values), &data[0]);
-					return *this;
-				}*/
 
 				void Print()
 				{

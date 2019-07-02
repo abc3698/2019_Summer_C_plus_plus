@@ -13,10 +13,10 @@ void main()
 	pointer::ex6::Run();
 	pointer::DIY::Run();*/ 	
 
-	/*Template::ex1::Run();
-	Template::ex2::Run();
-	Template::ex3::Run();
-	Template::DIY::Run();*/
+	//Template::ex1::Run();
+	//Template::ex2::Run();
+	//Template::ex3::Run();
+	/*Template::DIY::Run();*/
 
 
 }

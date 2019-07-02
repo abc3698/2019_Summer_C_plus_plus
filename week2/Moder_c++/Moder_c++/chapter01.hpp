@@ -145,6 +145,7 @@ namespace SMART_POINTER
 			{
 				cout << "unique_ptr for foo class" << endl;
 				std::unique_ptr<foo> pt{ new foo };
+				// Another Version
 				//std::unique_ptr<foo> pt = std::make_unique<foo>();
 				cout << "End block" << endl;
 			}
@@ -160,6 +161,7 @@ namespace SMART_POINTER
 			{
 				cout << "unique_ptr for foo class" << endl;
 				std::unique_ptr<ex2::foo[]> pt{ new ex2::foo[5] };
+				// Another Version
 				//std::unique_ptr<ex2::foo[]> pt = std::make_unique<ex2::foo[]>(5);
 				pt[0].Print();
 				pt[1].Print();
@@ -229,6 +231,7 @@ namespace SMART_POINTER
 			void Run()
 			{
 				std::shared_ptr<double> dp{ new double };
+				// Another Version
 				//std::shared_ptr<double> dp = std::make_shared<double>();
 				cout << dp << endl;
 				cout << dp.get() << endl;

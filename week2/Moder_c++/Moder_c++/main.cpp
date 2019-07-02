@@ -1,6 +1,7 @@
 #include "chapter01.hpp"
 #include "chapter02.hpp"
 
+
 int main()
 {
 	/*NotNarrowed::ex::Run();
@@ -26,6 +27,8 @@ int main()
 
 	CONSTRUCTOR::Delegating::Run();
 
+	CONSTRUCTOR::MEMBER_DEFAULT::Run();
+
 	CONSTRUCTOR::INITIALIZER_LIST::ex1::Run();
 	CONSTRUCTOR::INITIALIZER_LIST::ex2::Run();
 	CONSTRUCTOR::INITIALIZER_LIST::ex3::Run();
@@ -33,8 +36,5 @@ int main()
 	CONSTRUCTOR::INITIALIZER_LIST::DIY::Run();
 
 	CONSTRUCTOR::MOVE::ex1::Run();
-	CONSTRUCTOR::MOVE::ex2::Run();*/
-
-
-	return 0;
+	CONSTRUCTOR::MOVE::ex2::Run();*/		
 }
