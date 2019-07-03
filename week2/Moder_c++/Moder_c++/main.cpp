@@ -1,10 +1,26 @@
 #include "chapter01.hpp"
 #include "chapter02.hpp"
 
+#include <crtdbg.h>
+#include <iostream>
+
+#ifdef _DEBUG
+#define new new(_CLIENT_BLOCK, __FILE__, __LINE__)
+#define malloc(c) _malloc_dbg(s, _NORMAL_BLOCK, __FILE__, __LINE__)
+#endif
 
 int main()
+{	
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	int *a = new int[10];
+	_CrtDumpMemoryLeaks();	
+
+	int b = 0;
+}
+
+/*int main()
 {
-	/*NotNarrowed::ex::Run();
+	NotNarrowed::ex::Run();
 
 	NULLPOINTER::ex::Run();
 
@@ -36,5 +52,5 @@ int main()
 	CONSTRUCTOR::INITIALIZER_LIST::DIY::Run();
 
 	CONSTRUCTOR::MOVE::ex1::Run();
-	CONSTRUCTOR::MOVE::ex2::Run();*/		
-}
+	CONSTRUCTOR::MOVE::ex2::Run();		
+}*/
